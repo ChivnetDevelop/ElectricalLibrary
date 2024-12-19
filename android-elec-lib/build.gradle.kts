@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.chivnet.android_elec_lib"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         minSdk = 31

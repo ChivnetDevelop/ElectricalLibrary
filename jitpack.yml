@@ -1,0 +1,11 @@
+# configuration file for building snapshots and releases with jitpack.io
+jdk:
+  - openjdk17
+before_install:
+  - ./scripts/prepareJitpackEnvironment.sh
+install:
+  - FILE="-Dfile=android-elec-lib-release.aar" #NAME OF .AAR RELEASE FILE IN GITHUB
+  - mvn install:install-file $FILE -DgroupId=com.github.ChivnetDevelop -DartifactId=ElectricalLibrary -Dversion=1.0 -Dpackaging=aar -DgeneratePom=true
+  #NAME OF GITHUB ACCOUNT
+  # NAME OF REPO IN GITHUB ACCOUNT
+  #VERSION NUMBER 1.0
